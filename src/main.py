@@ -23,7 +23,7 @@ def tf2_running():
     for proc in psutil.process_iter():
         try:
             # checking exe name just in case its like, actually HL2
-            if "hl2" in proc.name().lower() and "Team Fortress" in proc.exe():
+            if "tf" in proc.name().lower() and "Team Fortress" in proc.exe():
                 return True
         except (psutil.NoSuchProcess,
                 psutil.AccessDenied,
